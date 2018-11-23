@@ -16,7 +16,6 @@ class PessoaEntity
 
     public function __construct()
     {
-
     }
 
     /**
@@ -68,26 +67,44 @@ class PessoaEntity
     }
 
     /**
-     * @return mixed
+     * @return false|string
      */
-    public function getGrupo()
+    public function getDataAtualizacao()
     {
-        return $this->grupo;
+        return $this->data_atualizacao;
     }
 
     /**
-     * @param mixed $grupo
+     * @param false|string $data_atualizacao
      */
-    public function setGrupo($grupo): void
+    public function setDataAtualizacao($data_atualizacao)
     {
-        $this->grupo = $grupo;
+        $this->data_atualizacao = $data_atualizacao;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDataCriacao()
+    {
+        return $this->data_criacao;
+    }
+
+    /**
+     * @param mixed $data_criacao
+     */
+    public function setDataCriacao($data_criacao)
+    {
+        $this->data_criacao = $data_criacao;
     }
 
     public function toArray(){
         return array(
+              'id'        => $this->getId(),
               'nome'      => $this->getNome(),
               'sobrenome' => $this->getSobrenome(),
-              'grupo'     => $this->getGrupo(),
+              'data_criacao' => $this->getDataCriacao() ? $this->getDataCriacao() : null,
+              'data_atualizacao' => $this->getDataAtualizacao() ? $this->getDataAtualizacao() : null,
         );
     }
 
