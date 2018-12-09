@@ -24,15 +24,11 @@ class ApiController extends AbstractCoreController
                     break;
                 }
                 case "editar":{
-                    $result = $tarefa->adicionar(json_decode($_REQUEST["params"]));
+                    $result = $tarefa->editar(json_decode($_REQUEST["params"]));
                     break;
                 }
                 case "excluir":{
-                    $result = $tarefa->adicionar(json_decode($_REQUEST["params"]));
-                    break;
-                }
-                case "listar":{
-                    $result = $tarefa->adicionar(json_decode($_REQUEST["params"]));
+                    $result = $tarefa->excluir(json_decode($_REQUEST["params"])['id']);
                     break;
                 }
                 default: {

@@ -1,7 +1,5 @@
 Requisitos:
 
-Php 7
-
 ##Configurando:
 
 Habilite o modo rewrite do apache;
@@ -29,7 +27,7 @@ define ("DB", 'prova');
 
 utilize a rota: {nomedapasta}/api/tarefa
 
-passar a funcionalidade via get: (adicionar, editar, excluir, listar) 
+passar a funcionalidade via get: (adicionar, editar, excluir) 
 
 passar os parametros via get em formato json
 
