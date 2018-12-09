@@ -1,7 +1,5 @@
 Requisitos:
 
-Php 7
-
 ##Configurando:
 
 Habilite o modo rewrite do apache;
