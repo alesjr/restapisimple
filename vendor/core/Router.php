@@ -2,10 +2,8 @@
 
 class Router
 {
-
     static public function parse($url, $request)
     {
-        $url = trim($url);
         $explode_url = explode('/', $url);
 
         if(!$explode_url[0]){
